@@ -3,15 +3,64 @@ apt:
   all_update_flag: True
   all_upgrade_flag: True
   packages:
+    #
+    - name: [ screen, git ]
+    #
+    # python3 pyenv venv
+    # https://github.com/pyenv/pyenv/wiki/Common-build-problems
+    - name: [ make, build-essential,
+              libssl-dev, zlib1g-dev, libbz2-dev, libreadline-dev, libsqlite3-dev,
+              wget, curl, llvm,
+              libncurses5-dev, libncursesw5-dev, xz-utils, tk-dev, libffi-dev, liblzma-dev ]
+    #
+    # pip3
+    - name: [ python3-pip, libopenjp2-7, libtiff5 ]
+    #
+    # jp fonts
+    - name: fonts-takao
+    #
+    # mqtt
+    - name: [ mosquitto, mosquitto-clients ]
+    #
+    # media player
+    - name: mplayer
+    #
+  xpackages:
+    #
+    - name: screen
+    - name: git
+    #
+    # python3 pyenv venv
+    # https://github.com/pyenv/pyenv/wiki/Common-build-problems
+    - name: make
+    - name: build-essential
+    - name: libssl-dev
+    - name: zlib1g-dev
+    - name: libbz2-dev
+    - name: libreadline-dev
+    - name: libsqlite3-dev
+    - name: wget
+    - name: curl
+    - name: llvm
+    - name: libncurses5-dev
+    - name: libncursesw5-dev
+    - name: xz-utils
+    - name: tk-dev
+    - name: libffi-dev
+    - name: liblzma-dev
+    #
+    # pip3
+    - name: python3-pip
+    - name: libopenjp2-7
+    - name: libtiff5
+    #
+    # jp fonts
+    - name: fonts-takao
+    #
+    # mqtt
     - name: mosquitto
     - name: mosquitto-clients
-    # - name: python-apt
-    # - name: vim
-    # - name: wget
-    # - name: apache2
-    # - name: php
-    # - name: php-mysql
-    # - name: php-gd
-    # - name: php-mbstring
-    # - name: mysql-server
-    # - name: python-mysqldb
+    #
+    # media player
+    - name: mplayer
+    #
